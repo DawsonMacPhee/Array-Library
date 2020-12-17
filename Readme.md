@@ -1,5 +1,45 @@
 This is a collection of functions that work together to act as an array data structure.
 
+Functions
+
+    struct Performance *newPerformance()
+        Creates a structure holding information about the efficiency of the array.
+        
+    struct Array *newArray(struct Performance *performance, unsigned int width, unsigned int capacity)
+        Creates a new array with each index holding "width" number of bytes and the total array holding "capacity" number of indicies.
+        
+    void readItem(struct Performance *performance, struct Array *array, unsigned int index, void *dest)
+        Copies the item at given index of array into the dest pointer.
+        
+    void writeItem(struct Performance *performance, struct Array *array, unsigned in index, void *src)
+        Copies the item in src to the array at the given index.
+        
+    void constract(struct Performance *performance, struct Array *array)
+        Removes the last element in the array by changing the maxsize.
+        
+    void freeArray(struct Performance *performance, struct Array *array)
+        Free all the memory allocated to the array.
+        
+    void appendItem(struct Performance *performance, struct Array *array, void *src)
+        Adds an item to the end of the array (does not increase capacity).
+        
+    void insertItem(struct Performance *performance, struct Array *array, unsigned int index, void *src)
+        Inserts an item into the array at a given index.
+        
+    void prependItem(struct Performance *performance, struct Array *array, void *src)
+        Adds an item to the begining of the array.
+        
+    void deleteItem(struct Performance *performance, struct Array *array, unsigned int index)
+        Removes an item at a given index.
+        
+    int findItem(struct Performance *performance, struct Array *array, int (*compar)(const void *, const void *). void *target)
+        Performs a linear search on the array looking for the target and returns the item's index.
+        Compares using the given compar function pointer.
+        
+    int searchItem(struct Performance *performance, struct Array *array, int (*compar)(const void *, const void *). void *target)
+        Performs a binary search on the array looking fo the target and returns the item's index.
+        Compares using the given compar function pointer.
+
 Files
 
     array.c
