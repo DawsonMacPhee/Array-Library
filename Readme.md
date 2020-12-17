@@ -57,7 +57,7 @@ Files
 Usage
 
     make all
-        Compiles all functions for the assignment into an object file
+        Compiles all functions for the library into an object file
         
     array.o
         Compiles all functions in array.c into an object file
