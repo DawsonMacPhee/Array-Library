@@ -54,9 +54,9 @@ Files
     names1.txt - names 3.txt
         Text files containing values to load as arrays for testing purposes
 
-Usage
+Usage (make)
 
-    make all
+    all
         Compiles all functions for the library into an object file
         
     array.o
